@@ -33,6 +33,7 @@ module.exports = {
       let { url, fileId } = await imageKit.upload({
         fileName: Date.now() + path.extname(req.file.originalname),
         file: strFile,
+        folder: "/challenge-6/images",
       });
 
       let imagePost = await prisma.image.create({
@@ -61,7 +62,7 @@ module.exports = {
 
       let image = await prisma.image.findMany({
         where: {
-          first_name: { contains: search, mode: "insensitive" },
+          title: { contains: search, mode: "insensitive" },
         },
       });
 

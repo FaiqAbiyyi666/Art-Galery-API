@@ -5,6 +5,8 @@ const imageKit = require("../libs/imagekit");
 const path = require("path");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET_KEY } = process.env;
+const dotenv = require("dotenv");
+dotenv.config();
 
 module.exports = {
   register: async (req, res, next) => {
@@ -32,9 +34,12 @@ module.exports = {
           first_name,
           last_name,
           email,
-          password,
+          password: encryptedPassword,
         },
       });
+
+      delete user.password;
+      delete user.avatar_id;
 
       return res.status(200).json({
         status: true,
@@ -50,7 +55,6 @@ module.exports = {
     try {
       let { email, password } = req.body;
       let user = await prisma.user.findFirst({ where: { email } });
-
       if (!user) {
         return res.status(400).json({
           status: false,
@@ -73,6 +77,7 @@ module.exports = {
       delete user.avatar_url;
       delete user.avatar_id;
       delete user.password;
+
       let token = jwt.sign(user, JWT_SECRET_KEY);
 
       return res.status(201).json({
@@ -225,9 +230,10 @@ module.exports = {
 
       let avatar = req.file.buffer.toString("base64");
 
-      let response = await imagekit.upload({
+      let response = await imageKit.upload({
         fileName: Date.now() + path.extname(req.file.originalname),
         file: avatar,
+        folder: "/challenge-6/avatar",
       });
 
       let updateUserAvatar = await prisma.user.update({
@@ -248,7 +254,7 @@ module.exports = {
     }
   },
 
-  destroy: async (req, es, next) => {
+  destroy: async (req, res, next) => {
     try {
       let id = Number(req.params.id);
 

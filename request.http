@@ -1,0 +1,73 @@
+### User Create 
+POST http://localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "first_name": "Kibow",
+    "last_name": "Ewok",
+    "email": "ewok@gmail.com",
+    "password": "123456"
+}
+
+### User Login 
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "ewok@gmail.com",
+    "password": "123456"
+}
+
+### Token
+GET http://localhost:3000/api/v1/auth/authenticate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+
+### Get all user
+GET http://localhost:3000/api/v1/users
+
+### Get all user by search
+GET http://localhost:3000/api/v1/users?search=kes
+
+### Get user by id
+GET http://localhost:3000/api/v1/users/5
+
+### Update profile
+PUT http://localhost:3000/api/v1/users/5/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+Content-Type: application/json
+
+{
+    "address" : "Surabaya",
+    "occupation" : "Backend Enginer" 
+}
+
+### Delete user
+DELETE http://localhost:3000/api/v1/users/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+
+
+
+#########################################
+############### IMAGE ###################
+
+### Get All Image
+GET http://localhost:3000/api/v1/image
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+
+### Get Image by ID
+GET http://localhost:3000/api/v1/image/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+
+### Edit Image
+PUT http://localhost:3000/api/v1/image/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+Content-Type: application/json
+
+{
+    "title" : "Skala Prioritas",
+    "description" : "Testing upload image 1" 
+}
+
+### Delete Image by ID
+DELETE http://localhost:3000/api/v1/image/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE

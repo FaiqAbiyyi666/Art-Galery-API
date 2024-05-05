@@ -23,3 +23,5 @@ router.delete("/users/:id", restrict, destroy);
 router.post("/auth/register", register);
 router.post("/auth/login", login);
 router.get("/auth/authenticate", restrict, auth);
+
+module.exports = router;

@@ -11,8 +11,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
-const routes = require("./routes");
-app.use("/api/v1", routes);
+app.get("/", (req, res) =>
+  res.json({ status: true, message: "Hello World!", data: null })
+);
 
 // 500 error handler
 app.use((err, req, res, next) => {
