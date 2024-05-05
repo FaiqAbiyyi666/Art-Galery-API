@@ -85,6 +85,21 @@ module.exports = {
     }
   },
 
+  auth: async (req, res, next) => {
+    try {
+      const user = req.user;
+      delete user.avatar_id;
+
+      return res.status(200).json({
+        status: true,
+        message: "OK",
+        data: req.user,
+      });
+    } catch (error) {
+      next(error);
+    }
+  },
+
   index: async (req, res, next) => {
     try {
       let { search } = req.query;
