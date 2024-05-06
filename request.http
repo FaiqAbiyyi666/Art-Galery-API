@@ -1,5 +1,5 @@
 ### User Create 
-POST http://localhost:3000/api/v1/auth/register
+POST https://prod-expressjs-production.up.railway.app/api/v1/auth/register
 Content-Type: application/json
 
 {
@@ -10,30 +10,30 @@ Content-Type: application/json
 }
 
 ### User Login 
-POST http://localhost:3000/api/v1/auth/login
+POST https://prod-expressjs-production.up.railway.app/api/v1/auth/login
 Content-Type: application/json
 
 {
-    "email": "ewok@gmail.com",
+    "email": "kepin@gmail.com",
     "password": "123456"
 }
 
 ### Token
-GET http://localhost:3000/api/v1/auth/authenticate
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+GET https://prod-expressjs-production.up.railway.app/api/v1/auth/authenticate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6IktlcGluIiwibGFzdF9uYW1lIjoiS29jYWsiLCJlbWFpbCI6ImtlcGluQGdtYWlsLmNvbSIsImlhdCI6MTcxNDk3MzgyNX0.N_CcfHOLyH_LHmleerNg-jsrF5OCc0RqZ7Hml67bAmw
 
 ### Get all user
-GET http://localhost:3000/api/v1/users
+GET https://prod-expressjs-production.up.railway.app/api/v1/users
 
 ### Get all user by search
-GET http://localhost:3000/api/v1/users?search=kes
+GET https://prod-expressjs-production.up.railway.app/api/v1/users?search=kes
 
 ### Get user by id
-GET http://localhost:3000/api/v1/users/5
+GET https://prod-expressjs-production.up.railway.app/api/v1/users/5
 
 ### Update profile
-PUT http://localhost:3000/api/v1/users/5/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+PUT https://prod-expressjs-production.up.railway.app/api/v1/users/1/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6IktlcGluIiwibGFzdF9uYW1lIjoiS29jYWsiLCJlbWFpbCI6ImtlcGluQGdtYWlsLmNvbSIsImlhdCI6MTcxNDk3MzgyNX0.N_CcfHOLyH_LHmleerNg-jsrF5OCc0RqZ7Hml67bAmw
 Content-Type: application/json
 
 {
@@ -42,8 +42,8 @@ Content-Type: application/json
 }
 
 ### Delete user
-DELETE http://localhost:3000/api/v1/users/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+DELETE https://prod-expressjs-production.up.railway.app/api/v1/users/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6IktlcGluIiwibGFzdF9uYW1lIjoiS29jYWsiLCJlbWFpbCI6ImtlcGluQGdtYWlsLmNvbSIsImlhdCI6MTcxNDk3MzgyNX0.N_CcfHOLyH_LHmleerNg-jsrF5OCc0RqZ7Hml67bAmw
 
 
 
@@ -51,16 +51,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3Rfb
 ############### IMAGE ###################
 
 ### Get All Image
-GET http://localhost:3000/api/v1/image
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+GET https://prod-expressjs-production.up.railway.app/api/v1/image
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6IktlcGluIiwibGFzdF9uYW1lIjoiS29jYWsiLCJlbWFpbCI6ImtlcGluQGdtYWlsLmNvbSIsImlhdCI6MTcxNDk3MzgyNX0.N_CcfHOLyH_LHmleerNg-jsrF5OCc0RqZ7Hml67bAmw
 
 ### Get Image by ID
-GET http://localhost:3000/api/v1/image/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+GET https://prod-expressjs-production.up.railway.app/api/v1/image/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6IktlcGluIiwibGFzdF9uYW1lIjoiS29jYWsiLCJlbWFpbCI6ImtlcGluQGdtYWlsLmNvbSIsImlhdCI6MTcxNDk3MzgyNX0.N_CcfHOLyH_LHmleerNg-jsrF5OCc0RqZ7Hml67bAmw
 
 ### Edit Image
-PUT http://localhost:3000/api/v1/image/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+PUT https://prod-expressjs-production.up.railway.app/api/v1/image/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6IktlcGluIiwibGFzdF9uYW1lIjoiS29jYWsiLCJlbWFpbCI6ImtlcGluQGdtYWlsLmNvbSIsImlhdCI6MTcxNDk3MzgyNX0.N_CcfHOLyH_LHmleerNg-jsrF5OCc0RqZ7Hml67bAmw
 Content-Type: application/json
 
 {
@@ -69,5 +69,5 @@ Content-Type: application/json
 }
 
 ### Delete Image by ID
-DELETE http://localhost:3000/api/v1/image/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZmlyc3RfbmFtZSI6IkJhZ3VzIiwibGFzdF9uYW1lIjoiWW9ubyIsImVtYWlsIjoieW9ub0BnbWFpbC5jb20iLCJpYXQiOjE3MTQ5MzYxOTF9.pwRlMNcADNy4E1LMiu_OCx49koDOVycS7fzI_gdEPeE
+DELETE https://prod-expressjs-production.up.railway.app/api/v1/image/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZmlyc3RfbmFtZSI6IktlcGluIiwibGFzdF9uYW1lIjoiS29jYWsiLCJlbWFpbCI6ImtlcGluQGdtYWlsLmNvbSIsImlhdCI6MTcxNDk3MzgyNX0.N_CcfHOLyH_LHmleerNg-jsrF5OCc0RqZ7Hml67bAmw
